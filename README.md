@@ -36,4 +36,4 @@ cd calculadora-javafx
 
 ## Capturas de tela
 
-*(adicione aqui um print da calculadora)*
+![Calculadora JavaFX](Docs/screenshot.png)
