@@ -1,0 +1,47 @@
+.root {
+    -fx-background-color: #1c1c1e;
+}
+
+.display-field {
+    -fx-background-color: #1c1c1e;
+    -fx-text-fill: white;
+    -fx-font-size: 42px;
+    -fx-font-family: "Segoe UI Light";
+    -fx-border-color: transparent;
+    -fx-padding: 10 20 10 20;
+}
+
+.btn-numero {
+    -fx-background-color: #333333;
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+    -fx-background-radius: 50%;
+}
+
+.btn-numero:hover {
+    -fx-background-color: #4d4d4d;
+}
+
+.btn-funcao {
+    -fx-background-color: #a5a5a5;
+    -fx-text-fill: #1c1c1e;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 50%;
+}
+
+.btn-funcao:hover {
+    -fx-background-color: #bfbfbf;
+}
+
+.btn-operador {
+    -fx-background-color: #ff9500;
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 50%;
+}
+
+.btn-operador:hover {
+    -fx-background-color: #ffb143;
+}

@@ -4,6 +4,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 
 public class CalculadoraController {
 
@@ -106,5 +108,33 @@ public class CalculadoraController {
             return String.valueOf((long) valor);
         }
         return String.valueOf(valor);
+    }
+
+    // função para o uso do teclado
+    public void handleKeyPress(KeyEvent event) {
+        String texto = event.getText();
+        KeyCode codigo = event.getCode();
+
+        if (texto.matches("[0-9]")) {
+            adicionarDigito(texto);
+        } else if (texto.equals(".") || texto.equals(",")) {
+            adicionarPontoDecimal();
+        } else if (texto.equals("+")) {
+            definirOperador("+");
+        } else if (texto.equals("-")) {
+            definirOperador("-");
+        } else if (texto.equals("*")) {
+            definirOperador("X");
+        } else if (texto.equals("/")) {
+            definirOperador("÷");
+        } else if (texto.equals("%")) {
+            aplicarPorcentagem();
+        } else if (codigo == KeyCode.ENTER || texto.equals("=")) {
+            handleIgual(null);
+        } else if (codigo == KeyCode.BACK_SPACE) {
+            apagarUltimoDigito();
+        } else if (codigo == KeyCode.ESCAPE || texto.equalsIgnoreCase("c")) {
+            limpar();
+        }
     }
 }
